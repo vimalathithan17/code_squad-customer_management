@@ -1,0 +1,16 @@
+{%extends 'detail_management/base.html'%}
+{% load crispy_forms_tags %}
+{% block content%}
+<div class="form_ position">
+    <form action="" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>select customer</legend>
+            <label for="c_id">
+                customer_id:<input type="text" name="customer_id" id="c_id">
+            </label>
+        </fieldset>
+        <input type="submit" value="select">
+    </form>
+</div>
+{%endblock content%}

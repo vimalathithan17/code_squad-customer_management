@@ -1,0 +1,45 @@
+{%extends 'detail_management/base.html' %} 
+{% load crispy_forms_tags %} 
+{% block content%}
+
+<div class="form_">
+  <legend><h3 class="head">customer profile</h3></legend>
+  <img src="{{profile.profile_image.url}}" alt="" />
+  <p>Name:{{customer.name}}</p>
+  <p>Email:{{profile.email}}</p>
+  <p>Nationality:{{profile.nationality}}</p>
+  <p>Phone number:{{profile.phone_number}}</p>
+  <p>Address:{{profile.address}}</p>
+  <a href="{% url 'update_profile'%}">update profile</a>
+</div>
+<br />
+
+{%if result%}
+<h3 class="head">Travel History</h3>
+<div class="grid_">
+  <div>S.No</div>
+  <div>Start</div>
+  <div>Dest</div>
+  <div>flight no.</div>
+  <div>year</div>
+  <div>mode</div>
+  {%for travelhistory in result %}
+  <div>{{forloop.counter}}</div>
+  <div>{{travelhistory.start}}</div>
+  <div>{{travelhistory.destination}}</div>
+  <div>{{travelhistory.flight_number}}</div>
+  <div>{{travelhistory.year}}</div>
+  <div>{{travelhistory.mode}}</div>
+  {%endfor%}
+  <br />
+</div>
+<div>
+  <a href="{% url 'add_travel'%}"><button>add travel info</button></a>
+</div>
+{% else %}
+<h3 class="head">NO Travel History</h3>
+<div>
+  <a href="{% url 'add_travel'%}">add travel info</a>
+</div>
+{% endif %} 
+{%endblock content%}

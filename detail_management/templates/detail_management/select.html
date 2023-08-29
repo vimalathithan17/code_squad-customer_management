@@ -1,0 +1,8 @@
+{%extends 'detail_management/base.html'%}
+{% load crispy_forms_tags %}
+{% block content%}
+<div class="form_ position">
+    <a href="{% url 'create_customer' %}"><button>Create Customer</button></a>
+    <a href="{% url 'view_customer' %}"><button>View Customer Detail</button></a>
+</div>
+{%endblock content%}

@@ -1,0 +1,14 @@
+{%extends 'detail_management/base.html'%}
+{% load crispy_forms_tags %}
+{% block content%}
+<div class="form_">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Profile</legend>
+            {{form|crispy}}
+        </fieldset>
+        <input type="submit" value="save">
+    </form>
+</div>
+{%endblock content%}

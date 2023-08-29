@@ -1,0 +1,14 @@
+{%extends 'detail_management/base.html'%}
+{% load crispy_forms_tags %}
+{% block content%}
+<div class="form_">
+    <form action="" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Creat Customer</legend>
+            {{form|crispy}}
+        </fieldset>
+        <input type="submit" value="create customer">
+    </form>
+</div>
+{%endblock content%}
