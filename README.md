@@ -12,7 +12,7 @@ Also the user accounts for those who manage the site can only be done by the adm
   i)you can do that by opening a termial navigate to the directory u want and typing <br />
         ```git clone https://github.com/vimalathithan17/code_squad-customer_management/```  <br />
 3)now in the terminal type <br />
-        ```cd code_squad-customer_management-main```<br />
+        ```cd code_squad-customer_management/```<br />
 4)now type<br />
         ```pipenv install --ignore-pipfile```<br />
 this will create a virtual evnironment and download all the dpendnecies.
